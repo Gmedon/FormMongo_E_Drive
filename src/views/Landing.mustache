@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulário de cadastro</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <h1>Formulário de cadastro</h1>
+    <form action="/cadastro" method="POST" enctype="multipart/form-data">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome e sobrenome" required>
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" name="idade" placeholder="Digite sua idade" required>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu melhor email" required>
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="Digite telefone de contato" required>
+      <label for="endereco">Endereço:</label>
+      <input id="endereco" name="endereco" placeholder="Digite seu Bairro, Rua" required />
+      <label for="linkedin">Link do LinkedIn:</label>
+      <input type="text" id="linkedin" name="linkedin" placeholder="Digite o link do seu LinkedIN" required>
+      <label for="github">Link do GitHub:</label>
+      <input type="text" id="github" name="github" placeholder="Digite seu repositorio do GitHub" required>
+      <label for="sobre">Sobre Você:</label>
+      <textarea id="sobre" name="sobre" maxlength="200" placeholder="Faça um breve resumo sobre você" required></textarea>
+      <label for="projeto">Link do Projeto Destaque:</label>
+      <input type="text" id="projeto" name="projetodestaque" placeholder="Coloque seu melhor projeto hospedado">
+      <label for="projeto">Foto do programador:</label>
+      <input type="file" id="foto" name="file" placeholder='Coloque sua foto!' required/>
+      <input type="submit" value="Enviar">
+    </form>
+    <div class="info">
+      <p>Você só deverá se inscrever, caso seja um programador carioca!!!</p>
+      <p>O aluno deverá ter cadastro no LinkedIN e GitHub!!!</p>
+      <p>A opção "Link do projeto destaque" deverá ser preenchida com um site hospedado!!!</p>
+      <p>Seus dados irão passar por uma análise!!!</p>
+    </div>
+    {{#erro}}
+    <script src="script.js"></script>
+    {{/erro}}
+  </body>
+</html>
